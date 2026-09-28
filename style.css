@@ -63,6 +63,7 @@
      @media (max-width:480px){
         display: flex;
         flex-direction: column;
+       
     }
 }
 .content{
@@ -138,6 +139,12 @@
     min-height: 50vh;
     box-sizing: border-box;
     margin: 50px;
+
+     @media (max-width: 480px){
+        margin: 0px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 }
 
 .container-about{
@@ -145,15 +152,26 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
+
+    @media (max-width: 480px){
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .box-1{
     width: 50%;
 
+    @media (max-width: 480px){
+        width: 100%;
+    }
 }
 
 .box-2{
     width: 50%;
+     @media (max-width: 480px){
+       width: 100%;
+    }
 }
 
 .box-2 ul > li::marker{
@@ -170,6 +188,103 @@
 
 #butoni{
         color: #65eeab;
+}
 
+
+#projects {
+    min-height: 50vh;
+    background-color: #111827;
+    color: white;
+
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+}
+
+#projects  > h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-projo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+
+    /* 2 equal columns */
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+/* Project boxes */
+.boxi-1,
+.boxi-2 {
+    background-color: #1f2937;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    padding: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+/* Images */
+.boxi-1 img,
+.boxi-2 img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.boxi-1:hover,
+.boxi-2:hover {
+    transform: translateY(-8px);
+}
+
+/* YouTube link */
+.youtube-link {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
+    color: white;
+    background-color: #374151;
+
+    padding: 12px 30px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.youtube-link:hover {
+    background-color: #4b5563;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .container-projo {
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-link {
+        grid-column: auto;
+    }
 
 }
+
